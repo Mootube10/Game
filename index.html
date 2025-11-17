@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RoboClicker</title>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=GBP"></script>
+<style>
+  body { background:#0a0f1a; color:#fff; font-family:Arial; text-align:center; }
+  .tabs { margin-top:20px; }
+  button { padding:10px 20px; margin:5px; border:none; border-radius:8px; cursor:pointer; }
+  #game, #shop { display:none; }
+  #robot { width:260px; cursor:pointer; margin-top:30px; }
+  .panel { margin-top:20px; background:#111827; padding:20px; border-radius:10px; width:60%; margin-left:auto; margin-right:auto; }
+</style>
+</head>
+<body>
+
+<h1>🤖 RoboClicker</h1>
+
+<div class="tabs">
+  <button onclick="openTab('game')">Game</button>
+  <button onclick="openTab('shop')">Shop</button>
+</div>
+
+<!-- GAME TAB -->
+<div id="game" class="panel">
+  <h2>Robot Clicker</h2>
+  <p>Coins: <span id="coins">0</span></p>
+  <p>Coins per click: <span id="cpc">1</span></p>
+  <img id="robot" src="https://i.imgur.com/BwsU9XE.png">
+</div>
+
+<!-- SHOP TAB -->
+<div id="shop" class="panel">
+  <h2>Upgrades & Donations</h2>
+
+  <h3>Purchase Coins</h3>
+  <div id="paypal-coins"></div>
+
+  <br><br>
+  <h3>Donate (£1 - £20)</h3>
+  <div id="paypal-donate"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
